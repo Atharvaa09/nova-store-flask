@@ -42,55 +42,11 @@ jobs:
           name: nova-store-flask
           path: dist/nova-store-flask.zip
 
-          
-name: NOVA Store CI
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  test-build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
-
-      - name: Code quality check
-        run: python -m flake8 app tests run.py
-
-      - name: Automated tests
-        run: python -m pytest -v
-        env:
-          PYTHONPATH: ${{ github.workspace }}
-
-      - name: Prepare application artifact
-        run: |
-          mkdir -p dist
-          zip -r dist/nova-store-flask.zip app data/products.json run.py requirements.txt README.md
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: nova-store-flask
-          path: dist/nova-store-flask.zip
-
-
       - name: Deploy to Render
-        if: success() && github.ref == 'refs/heads/main'
+        if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
           RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
         run: |
+          test -n "$RENDER_DEPLOY_HOOK"
           curl --fail --silent --show-error \
             --request POST "$RENDER_DEPLOY_HOOK"
