@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}NOVA Store{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<div class="announcement">Free shipping on orders over ₹1,499 <span>✦</span> Thoughtfully picked for you</div>
+<header class="site-header"><a class="brand" href="{{ url_for('index') }}">NOVA<span>.</span></a><nav><a href="{{ url_for('index') }}#shop">Shop</a><a href="{{ url_for('index') }}#story">Our story</a></nav><a class="cart-link" href="{{ url_for('cart') }}">Bag <span>{{ cart_count|default(0) }}</span></a></header>
+{% with messages = get_flashed_messages() %}{% if messages %}<div class="flash-wrap">{% for message in messages %}<p class="flash">{{ message }}</p>{% endfor %}</div>{% endif %}{% endwith %}
+{% block content %}{% endblock %}
+<footer><a class="brand" href="{{ url_for('index') }}">NOVA<span>.</span></a><p>Everyday essentials, thoughtfully chosen.</p><span>Student project demo · 2026</span></footer>
+</body></html>

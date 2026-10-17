@@ -1,0 +1,10 @@
+[
+  {"id": 1, "name": "Everyday Bottle", "category": "Lifestyle", "price": 799, "tag": "Bestseller", "description": "A reusable bottle for your everyday routine.", "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=700&q=85"},
+  {"id": 2, "name": "Studio Notebook", "category": "Lifestyle", "price": 449, "tag": "New", "description": "A simple notebook for plans, notes, and ideas.", "image": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=700&q=85"},
+  {"id": 3, "name": "Wireless Headphones", "category": "Tech", "price": 2499, "tag": "Popular", "description": "Comfortable everyday audio with a minimal design.", "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=85"},
+  {"id": 4, "name": "Desk Light", "category": "Lifestyle", "price": 1299, "tag": "", "description": "A warm, focused glow for your desk or bedside.", "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=85"},
+  {"id": 5, "name": "Everyday Tote", "category": "Accessories", "price": 599, "tag": "Bestseller", "description": "A versatile carry-all for everyday plans.", "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=700&q=85"},
+  {"id": 6, "name": "Wireless Speaker", "category": "Tech", "price": 1899, "tag": "", "description": "Compact sound for your room, desk, or weekend.", "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=85"},
+  {"id": 7, "name": "Classic Sunglasses", "category": "Accessories", "price": 999, "tag": "New", "description": "A timeless frame designed to go with everything.", "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=85"},
+  {"id": 8, "name": "Ceramic Cup Set", "category": "Lifestyle", "price": 699, "tag": "", "description": "Everyday cups with a soft, considered finish.", "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=700&q=85"}
+]
